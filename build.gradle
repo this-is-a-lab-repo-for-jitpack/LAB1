@@ -1,0 +1,16 @@
+plugins {
+  id 'java-library'
+  id 'maven-publish'
+}
+
+group = "com.github.this-is-a-lab-repo-for-jitpack"
+
+java {
+  toolchain { languageVersion = JavaLanguageVersion.of(17) }
+}
+
+publishing {
+  publications {
+    mavenJava(MavenPublication) { from components.java }
+  }
+}

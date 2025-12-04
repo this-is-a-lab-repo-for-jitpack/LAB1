@@ -1,17 +1,17 @@
-
 plugins {
   id 'java-library'
   id 'maven-publish'
 }
 
-group = "com.github.this-is-a-lab-repo-for-jitpack"
+group = "com.github.frame"
 
-java {
-  toolchain { languageVersion = JavaLanguageVersion.of(17) }
-}
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 publishing {
   publications {
-    mavenJava(MavenPublication) { from components.java }
+    mavenJava(MavenPublication) {
+      from components.java
+    }
   }
 }
